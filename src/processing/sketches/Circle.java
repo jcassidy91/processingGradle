@@ -13,13 +13,13 @@ public class Circle implements Comparable<Circle> {
     private float radius;
     private float angle;
     private float amplitude = 60;
-    private int clr;
+    private int hue;
 
     //Constructor
-    public Circle(float _x, float _angle, int _clr) {
-        this.x = _x;
-        this.angle = _angle;
-        this.clr = _clr;
+    public Circle(float x, float angle, int hue) {
+        this.x = x;
+        this.angle = angle;
+        this.hue = hue;
 
         this.radius = 40;
         this.y = p.height/2.0f;
@@ -27,7 +27,7 @@ public class Circle implements Comparable<Circle> {
 
     //Methods (Actions)
     public void drawSelf() {
-        p.fill(clr);
+        p.fill(hue);
         p.ellipse(x, y, radius, radius);
     }
 
@@ -39,6 +39,50 @@ public class Circle implements Comparable<Circle> {
 
     public float getRadius() {
         return radius;
+    }
+
+    public float getX() {
+        return x;
+    }
+
+    public void setX(float x) {
+        this.x = x;
+    }
+
+    public float getY() {
+        return y;
+    }
+
+    public void setY(float y) {
+        this.y = y;
+    }
+
+    public void setRadius(float radius) {
+        this.radius = radius;
+    }
+
+    public float getAngle() {
+        return angle;
+    }
+
+    public void setAngle(float angle) {
+        this.angle = angle;
+    }
+
+    public float getAmplitude() {
+        return amplitude;
+    }
+
+    public void setAmplitude(float amplitude) {
+        this.amplitude = amplitude;
+    }
+
+    public int getHue() {
+        return hue;
+    }
+
+    public void setHue(int hue) {
+        this.hue = hue;
     }
 
     @Override
